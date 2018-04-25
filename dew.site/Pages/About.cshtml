@@ -1,0 +1,14 @@
+﻿@page
+@model AboutModel
+@{
+    ViewData["Title"] = "About";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@Model.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+
+<bootstrap-alert class="alert-warning alert-dismissible fade in">
+  <bootstrap-alert-close><span aria-hidden="true">×</span></bootstrap-alert-close>
+  <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
+</bootstrap-alert>

@@ -1,0 +1,53 @@
+﻿@inject IOptions<ConfigModel> Options
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <title> @ViewData["Title"] | @Options.Value.TituloSistema </title>
+  <!-- Favicon-->
+  <link rel="icon" href="~/favicon.ico" type="image/x-icon">
+  @await Html.PartialAsync("Partials/Styles")
+  @await RenderSectionAsync("Styles", required: false)
+  @await Html.PartialAsync("Partials/Jquery")
+</head>
+<body class="theme-orange">
+  <!-- Page Loader -->
+  @await Html.PartialAsync("Partials/PageLoader")
+  <!-- #END# Page Loader -->
+  <!-- Overlay For Sidebars -->
+  <div class="overlay"></div>
+  <!-- #END# Overlay For Sidebars -->
+  <!-- Top Bar -->
+  @await Html.PartialAsync("Partials/Topbar")
+  <!-- #Top Bar -->
+  <section>
+    <!-- Left Sidebar -->
+    <aside id="leftsidebar" class="sidebar">
+      <!-- User Info -->
+      @await Html.PartialAsync("Partials/UserInfo")
+      <!-- #User Info -->
+      <!-- Menu -->
+      @await Html.PartialAsync("Partials/Menu")
+      <!-- #Menu -->
+      <!-- Footer -->
+      @await Html.PartialAsync("Partials/Footer")
+      <!-- #Footer -->
+    </aside>
+    <!-- #END# Left Sidebar -->
+  </section>
+  <section class="content">
+    <div class="container-fluid">
+      <div class="block-header">
+        <h2>
+          @ViewData["Title"]
+        </h2>
+      </div>
+      @RenderBody()
+    </div>
+  </section>
+  @await Html.PartialAsync("Partials/Scripts")
+  @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,90 @@
+﻿[
+  {
+    "outputFile": "wwwroot/css/themes/all-themes.css",
+    "inputFile": "scss/themes/_all-themes.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/themes/theme-red.css",
+    "inputFile": "scss/themes/theme-red.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/themes/theme-amber.css",
+    "inputFile": "scss/themes/theme-amber.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/themes/theme-black.css",
+    "inputFile": "scss/themes/theme-black.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/themes/theme-blue-grey.css",
+    "inputFile": "scss/themes/theme-blue-grey.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/themes/theme-blue.css",
+    "inputFile": "scss/themes/theme-blue.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/themes/theme-brown.css",
+    "inputFile": "scss/themes/theme-brown.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/themes/theme-cyan.css",
+    "inputFile": "scss/themes/theme-cyan.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/themes/theme-deep-orange.css",
+    "inputFile": "scss/themes/theme-deep-orange.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/themes/theme-deep-purple.css",
+    "inputFile": "scss/themes/theme-deep-purple.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/themes/theme-green.css",
+    "inputFile": "scss/themes/theme-green.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/themes/theme-grey.css",
+    "inputFile": "scss/themes/theme-grey.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/themes/theme-indigo.css",
+    "inputFile": "scss/themes/theme-indigo.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/themes/theme-light-blue.css",
+    "inputFile": "scss/themes/theme-light-blue.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/themes/theme-lime.css",
+    "inputFile": "scss/themes/theme-lime.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/themes/theme-orange.css",
+    "inputFile": "scss/themes/theme-orange.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/themes/theme-pink.css",
+    "inputFile": "scss/themes/theme-pink.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/themes/theme-purple.css",
+    "inputFile": "scss/themes/theme-purple.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/themes/theme-teal.css",
+    "inputFile": "scss/themes/theme-teal.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/themes/theme-yellow.css",
+    "inputFile": "scss/themes/theme-yellow.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/style.css",
+    "inputFile": "scss/style.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/bootstrap.mvc.css",
+    "inputFile": "scss/bootstrap.mvc.scss"
+  }
+]
