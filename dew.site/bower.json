@@ -3,10 +3,9 @@
   "authors": [
     "Renan Marcel Paulino Leite <renannn@outlook.com>"
   ],
-  "description": "",
-  "main": "",
-  "license": "MIT",
-  "homepage": "",
+  "license": "ISC",
+  "homepage": "https://github.com/recapix/dew",
+  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
@@ -31,7 +30,7 @@
     "components-font-awesome": "^5.0.6",
     "gmaps": "^0.4.25",
     "ion.rangeSlider": "ionrangeslider#^2.2.0",
-    "jquery": "1.12.3",
+    "jquery": "1.9.1",
     "jquery.cookie": "jquery-cookie#^1.4.1",
     "jquery-countTo": "countto#^1.2.0",
     "inputmask": "^3.3.11",
