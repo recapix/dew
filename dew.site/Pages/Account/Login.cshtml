@@ -1,0 +1,76 @@
+﻿@page
+@model Account.LoginModel
+@inject IOptions<ConfigModel> Options
+@{
+  Layout = null;
+  ViewData["Title"] = "Login";
+}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <title>@ViewData["Title"] - AdminProj</title>
+  @await Html.PartialAsync("partials/Styles")
+  @await Html.PartialAsync("partials/Jquery")
+</head>
+<body class="login-page">
+  <div class="login-box">
+    <div class="logo">
+      <a href="javascript:void(0);">@Options.Value.TituloSistema</a>
+      <small>Sistema de integração medica</small>
+    </div>
+    <div class="card">
+      <div class="body">
+        <form id="sign_in" method="POST">
+          <div class="msg">Entre com sua conta para iniciar sua sessão</div>
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="material-icons">person</i>
+            </span>
+            <div class="form-line">
+              <label asp-for="Input.Email"></label>
+              <input asp-for="Input.Email" class="form-control" autofocus />
+              <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="material-icons">lock</i>
+            </span>
+            <div class="form-line">
+              <label asp-for="Input.Password"></label>
+              <input asp-for="Input.Password" class="form-control" />
+              <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-8 p-t-5">
+              <div class="checkbox">
+                <label asp-for="Input.RememberMe">
+                  <input asp-for="Input.RememberMe" />
+                  @Html.DisplayNameFor(m => m.Input.RememberMe)
+                </label>
+              </div>
+            </div>
+            <div class="col-xs-4">
+              <button class="btn btn-block bg-pink waves-effect" type="submit">SIGN IN</button>
+            </div>
+          </div>
+          <div class="row m-t-15 m-b--20">
+            <div class="col-xs-6">
+              <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
+            </div>
+            <div class="col-xs-6 align-right">
+              <a href="#">Forgot Password?</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  @await Html.PartialAsync("Partials/Scripts")
+  @await Html.PartialAsync("Partials/ValidationScripts")
+</body>
+</html>

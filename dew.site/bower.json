@@ -53,6 +53,7 @@
     "raphael": "^2.2.7",
     "sweetalert": "^2.1.0",
     "tinymce": "^4.7.11",
-    "wait-me": "https://github.com/NetanelBasal/waitMe.git"
+    "wait-me": "https://github.com/NetanelBasal/waitMe.git",
+    "jquery-validation-unobtrusive": "^3.2.9"
   }
 }

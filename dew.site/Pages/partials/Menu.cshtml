@@ -2,25 +2,25 @@
 <div class="menu">
   <ul class="list">
     <li class="header">MAIN NAVIGATION</li>
-    <li>
+    <li condition-class-active="@isHome()">
       <a asp-page="/Index">
         <i class="material-icons">home</i>
         <span>Home</span>
       </a>
     </li>
-    <li>
+    <li condition-class-active="@isAbout()">
       <a asp-page="/About">
         <i class="material-icons">text_fields</i>
         <span>About</span>
       </a>
     </li>
-    <li> 
+    <li condition-class-active="@isContact()">
       <a asp-page="/Contact">
         <i class="material-icons">layers</i>
         <span>Contact</span>
       </a>
     </li>
-    <li class="active">
+    <li>
       <a href="javascript:void(0);" class="menu-toggle">
         <i class="material-icons">content_copy</i>
         <span>Example Pages</span>
@@ -35,7 +35,7 @@
         <li>
           <a href="#">Forgot Password</a>
         </li>
-        <li class="active">
+        <li>
           <a href="#">Blank Page</a>
         </li>
         <li>
@@ -54,3 +54,19 @@
     </li>
   </ul>
 </div>
+
+
+@functions
+{
+  bool isHome() => ViewData["Title"].ToString() == "Home page"; 
+
+  bool isAbout() => ViewData["Title"].ToString() == "About";
+  
+  bool isContact() => ViewData["Title"].ToString() == "Contact";
+
+
+
+
+
+
+}
