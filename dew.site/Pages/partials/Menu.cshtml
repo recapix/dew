@@ -20,33 +20,37 @@
         <span>Contact</span>
       </a>
     </li>
-    <li>
+    <li condition-class-active="@isAdministrador()">
       <a href="javascript:void(0);" class="menu-toggle">
-        <i class="material-icons">content_copy</i>
-        <span>Example Pages</span>
+        <i class="material-icons">trending_down</i>
+        <span>Administrador</span>
       </a>
       <ul class="ml-menu">
-        <li>
-          <a href="#">Sign In</a>
-        </li>
-        <li>
-          <a href="#">Sign Up</a>
-        </li>
-        <li>
-          <a href="#">Forgot Password</a>
-        </li>
-        <li>
-          <a href="#">Blank Page</a>
-        </li>
-        <li>
-          <a href="#">404 - Not Found</a>
-        </li>
-        <li>
-          <a href="#">500 - Server Error</a>
+        <li condition-class-active="@isAdministradorUsuario()">
+          <a href="javascript:void(0);" class="menu-toggle">
+            <span>Usuários</span>
+          </a>
+          <ul class="ml-menu">
+            <li condition-class-active="@isAdministradorUsuarioCadastro()">
+              <a asp-page="/Administrador/Usuarios/Cadastro">
+                <span>Cadastro</span>
+              </a>
+            </li>
+            <li condition-class-active="@isAdministradorUsuarioConsulta()">
+              <a asp-page="/Administrador/Usuarios/Consulta">
+                <span>Consulta</span>
+              </a>
+            </li>
+            <li condition-class-active="@isAdministradorUsuarioRelatorio()">
+              <a asp-page="/Administrador/Usuarios/Relatorio">
+                <span>Relatório</span>
+              </a>
+            </li>
+          </ul>
         </li>
       </ul>
     </li>
-    <li>
+    <li condition-class-active="@isChangelogs()">
       <a asp-page="/Changelogs">
         <i class="material-icons">update</i>
         <span>Changelogs</span>
@@ -58,15 +62,28 @@
 
 @functions
 {
-  bool isHome() => ViewData["Title"].ToString() == "Home page"; 
+bool isHome() => ViewData["Menu"].ToString() == "Home";
 
-  bool isAbout() => ViewData["Title"].ToString() == "About";
-  
-  bool isContact() => ViewData["Title"].ToString() == "Contact";
+bool isAbout() => ViewData["Menu"].ToString() == "About";
 
+bool isContact() => ViewData["Menu"].ToString() == "Contact";
 
+// Administrador
 
+bool isAdministrador() => ViewData["Menu"].ToString().Contains("Administrador-");
 
+// Administrador - Usuario
+
+bool isAdministradorUsuario() => ViewData["Menu"].ToString().Contains("Administrador-Usuario-");
+
+bool isAdministradorUsuarioCadastro() => ViewData["Menu"].ToString().Contains("Administrador-Usuario-Cadastro");
+
+bool isAdministradorUsuarioConsulta() => ViewData["Menu"].ToString().Contains("Administrador-Usuario-Consulta");
+
+bool isAdministradorUsuarioRelatorio() => ViewData["Menu"].ToString().Contains("Administrador-Usuario-Relatorio");
+
+// Changelogs
+bool isChangelogs() => ViewData["Menu"].ToString() == "Changelogs";
 
 
 }

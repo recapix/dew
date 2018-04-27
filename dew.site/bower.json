@@ -54,6 +54,11 @@
     "sweetalert": "^2.1.0",
     "tinymce": "^4.7.11",
     "wait-me": "https://github.com/NetanelBasal/waitMe.git",
-    "jquery-validation-unobtrusive": "^3.2.9"
+    "jquery-validation-unobtrusive": "^3.2.9",
+    "datatables.net-dt": "^3.2.2",
+    "jszip": "^3.1.5",
+    "pdfmake": "^0.1.36",
+    "datatables.net-bs": "^2.1.1",
+    "datatables.net-buttons-bs": "^1.4.2"
   }
 }

@@ -2,9 +2,9 @@
 @using dew.site.Pages
 @model dew.site.Pages.AboutModel
 @{
+    ViewData["Menu"] = "About";
     ViewData["Title"] = "About";
 }
-<h2>@ViewData["Title"]</h2>
 <h3>@Model.Message</h3>
 
 <p>Use this area to provide additional information.</p>

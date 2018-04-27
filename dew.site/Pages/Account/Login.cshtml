@@ -47,10 +47,9 @@
           <div class="row">
             <div class="col-xs-8 p-t-5">
               <div class="checkbox">
-                <label asp-for="Input.RememberMe">
-                  <input asp-for="Input.RememberMe" />
+                  <input type="checkbox" asp-for="Input.RememberMe" class="filled-in chk-col-pink"/>
                   @Html.DisplayNameFor(m => m.Input.RememberMe)
-                </label>
+                <label asp-for="Input.RememberMe"></label>
               </div>
             </div>
             <div class="col-xs-4">
