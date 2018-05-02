@@ -1,72 +1,58 @@
 ﻿@page
-@model dew.site.Pages.Administrador.Usuarios.ConsultaModel
+@model Administrador.Usuarios.ConsultaModel
 @{
   ViewData["Menu"] = "Administrador-Usuario-Consulta";
   ViewData["Title"] = "Consulta de usuário";
 }
 
-
-            <!-- Striped Rows -->
-            <div class="row clearfix">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="card">
-                        <div class="header">
-                            <h2>
-                                STRIPED ROWS
-                                <small>Use <code>.table-striped</code> to add zebra-striping to any table row within the <code>&lt;tbody&gt;</code></small>
-                            </h2>
-                        </div>
-                        <div class="body table-responsive">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>E-mail</th>
-                                        <th>Nome</th>
-                                        <th>Sobrenome</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>mdo</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>mdo</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>mdo</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>mdo</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>mdo</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>mdo</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- #END# Striped Rows -->
+<!-- Striped Rows -->
+<div class="row clearfix">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="card">
+      <div class="header">
+        <h2>
+          STRIPED ROWS
+          <small>Use <code>.table-striped</code> to add zebra-striping to any table row within the <code>&lt;tbody&gt;</code></small>
+        </h2>
+      </div>
+      <div class="body table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>E-mail</th>
+              <th>Nome</th>
+              <th>Sobrenome</th>
+              <th>Bloqueado?</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach (var item in Model.Consulta.Users)
+            {
+            <tr>
+              <th scope="row">1</th>
+              <td>@item.Email</td>
+              <td>@item.Firstname</td>
+              <td>@item.Lastname</td>
+              <td>Falso</td>
+              <td>
+                <a href="#">
+                  <i class="material-icons">lock</i>
+                </a>
+                <a href="#">
+                  <i class="material-icons">mode_edit</i>
+                </a>
+                <a href="#">
+                  <i class="material-icons">bug_report</i>
+                </a>
+              </td>
+            </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- #END# Striped Rows -->
