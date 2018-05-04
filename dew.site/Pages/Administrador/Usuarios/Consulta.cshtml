@@ -19,35 +19,53 @@
         <table class="table table-striped">
           <thead>
             <tr>
-              <th>#</th>
+              <th class="text-center">Editar</th>
+              <th>Grupo de Usuário</th>
               <th>E-mail</th>
               <th>Nome</th>
               <th>Sobrenome</th>
-              <th>Bloqueado?</th>
-              <th></th>
+              <th class="text-center">Bloqueado?</th>
+              <th class="text-center">Resetar Senha</th>
+              <th class="text-center">Bugs Reportados</th>
+              <th class="text-center">Log</th>
+              <th class="text-center">Auditoria</th>
             </tr>
           </thead>
           <tbody>
             @foreach (var item in Model.Consulta.Users)
             {
-            <tr>
-              <th scope="row">1</th>
-              <td>@item.Email</td>
-              <td>@item.Firstname</td>
-              <td>@item.Lastname</td>
-              <td>Falso</td>
-              <td>
-                <a href="#">
-                  <i class="material-icons">lock</i>
-                </a>
-                <a href="#">
-                  <i class="material-icons">mode_edit</i>
-                </a>
-                <a href="#">
-                  <i class="material-icons">bug_report</i>
-                </a>
-              </td>
-            </tr>
+              <tr>
+                <th scope="row" class="text-center">
+                  <a href="#">
+                    <i class="material-icons">mode_edit</i>
+                  </a>
+                </th>
+                <td>Administradores</td>
+                <td>@item.Email</td>
+                <td>@item.Firstname</td>
+                <td>@item.Lastname</td>
+                <td class="text-center">Falso</td>
+                <td class="text-center">
+                  <a href="#">
+                    <i class="material-icons">lock</i>
+                  </a>
+                </td>
+                <td class="text-center">
+                  <a href="#">
+                    <i class="material-icons">bug_report</i>
+                  </a>
+                </td>
+                <td class="text-center">
+                  <a href="#">
+                    <i class="material-icons">insert_drive_file</i>
+                  </a>
+                </td>
+                <td class="text-center">
+                  <a href="#">
+                    <i class="material-icons">find_in_page</i>
+                  </a>
+                </td>
+              </tr>
             }
           </tbody>
         </table>
